@@ -1,0 +1,13 @@
+ComponentInterface { name costmap_aggregator
+	FromRosNode "costmap_aggregator.costmap_aggregator.costmap_aggregator"
+	RosPublishers{
+		RosPublisher "heatmap" { RefPublisher "costmap_aggregator.costmap_aggregator.costmap_aggregator.heatmap"}
+	}
+	RosSubscribers{
+		RosSubscriber "costmap" { RefSubscriber "costmap_aggregator.costmap_aggregator.costmap_aggregator.costmap"}
+	}
+	
+		RosParameters{
+			RosParameter "aggregation_time" { RefParameter "costmap_aggregator.costmap_aggregator.costmap_aggregator.aggregation_time"}
+		}
+}

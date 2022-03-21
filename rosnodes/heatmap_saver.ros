@@ -1,0 +1,8 @@
+PackageSet { 
+	CatkinPackage heatmap_saver { 
+		Artifact heatmap_saver {
+			Node{ name heatmap_saver
+				Subscribers{
+					Subscriber{ name 'heatmap' message 'nav_msgs.OccupancyGrid'}
+				}		
+}}}}

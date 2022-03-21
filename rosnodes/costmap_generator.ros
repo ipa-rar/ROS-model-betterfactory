@@ -1,0 +1,20 @@
+PackageSet { 
+	CatkinPackage costmap_generator { 
+		Artifact costmap_generator {
+			Node{ name costmap_generator
+
+				Publishers {
+					Publisher { name 'costmap' message 'nav_msgs.OccupancyGrid'}}		
+				Subscribers{
+					Subscriber{ name 'scan1' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan2' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan3' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan4' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan5' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan6' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan7' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan8' message 'sensor_msgs.LaserScan'} ,
+					Subscriber{ name 'scan9' message 'sensor_msgs.LaserScan'}}
+				ServiceClients{
+          			ServiceClient { name 'static_map' service 'nav_msgs.GetMap' }}
+}}}}

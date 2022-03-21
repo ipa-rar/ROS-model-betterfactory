@@ -1,0 +1,12 @@
+PackageSet { 
+	CatkinPackage costmap_aggregator { 
+		Artifact costmap_aggregator { 
+			Node { name costmap_aggregator
+				Publishers{
+					Publisher { name 'heatmap' message 'nav_msgs.OccupancyGrid'}}
+				Subscribers{
+					Subscriber{ name 'costmap' message 'nav_msgs.OccupancyGrid'}}	
+				Parameters {
+					Parameter{ name 'aggregation_time' type Integer default 3600 }}
+
+}}}}

@@ -1,0 +1,25 @@
+PackageSet { 
+	CatkinPackage rplidar_ros { 
+		Artifact rplidar_ros { 
+			Node { name rplidar_ros
+				ServiceServers {
+					ServiceServer { name 'stop_motor' service 'std_srvs.Empty' },
+					ServiceServer { name 'start_motor' service 'std_srvs.Empty' }
+				}
+				Publishers {
+					Publisher { name 'scan' message 'sensor_msgs.LaserScan' }
+				}
+				 Parameters {
+					Parameter { name 'channel_type' type String default 'serial' },
+					Parameter { name 'tcp_ip' type String default '192.168.0.7' },
+					Parameter { name 'tcp_port' type Integer default 20108 },
+					Parameter { name 'udp_ip' type String default '192.168.11.2' },
+					Parameter { name 'udp_port' type Integer default 8089 },
+					Parameter { name 'serial_port' type String default '/dev/ttyUSB0' },
+					Parameter { name 'serial_baudrate' type Integer default 115200 },
+					Parameter { name 'frame_id' type String default 'laser_frame'},
+					Parameter { name 'inverted' type Boolean default false },
+					Parameter { name 'angle_compensate' type Boolean default false },
+					Parameter { name 'scan_mode' type Double } 	
+				} 				
+}}}}

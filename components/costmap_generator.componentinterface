@@ -1,0 +1,21 @@
+ComponentInterface { name costmap_generator
+	FromRosNode "costmap_generator.costmap_generator.costmap_generator"
+	RosPublishers{
+		RosPublisher "costmap" { RefPublisher "costmap_generator.costmap_generator.costmap_generator.costmap"}
+	}
+	RosSubscribers{
+		RosSubscriber "scan1" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan1"},
+		RosSubscriber "scan2" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan2"},
+		RosSubscriber "scan3" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan3"},
+		RosSubscriber "scan4" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan4"},
+		RosSubscriber "scan5" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan5"},
+		RosSubscriber "scan6" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan6"},
+		RosSubscriber "scan7" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan7"},
+		RosSubscriber "scan8" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan8"},
+		RosSubscriber "scan9" { RefSubscriber "costmap_generator.costmap_generator.costmap_generator.scan9"}
+	}
+	RosSrvClients{
+		RosServiceClient "static_map" { RefClient "costmap_generator.costmap_generator.costmap_generator.static_map"}
+	}
+	
+}

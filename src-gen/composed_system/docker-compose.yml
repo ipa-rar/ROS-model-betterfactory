@@ -1,0 +1,23 @@
+version: "3.3"
+networks:
+  ros:
+    driver: bridge
+    
+services:
+  ros-master:
+    image: ros:melodic-ros-core
+    command: stdbuf -o L roscore
+    networks:
+      - ros
+
+  composed_system:
+    image: "composed_system:latest"
+    depends_on:
+      - ros-master
+    environment:
+      - "ROS_MASTER_URI=http://ros-master:11311"
+      - "ROS_HOSTNAME=composed_system"
+    networks:
+      - ros
+    command: stdbuf -o L roslaunch composed_system composed_system.launch --wait
+

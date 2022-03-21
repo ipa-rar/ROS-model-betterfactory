@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan1" ns="scan1" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan1/stop_motor' />
+    <remap from='start_motor' to='scan1/start_motor' />
+  </node>
+  <node pkg="map_server" type="map_server" name="map_server" cwd="node" respawn="false" output="screen">
+  </node>
+  <node pkg="costmap_aggregator" type="costmap_aggregator" name="costmap_aggregator" cwd="node" respawn="false" output="screen">
+  </node>
+  <node pkg="heatmap_saver" type="heatmap_saver" name="heatmap_saver" cwd="node" respawn="false" output="screen">
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan2" ns="scan2" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan2/stop_motor' />
+    <remap from='start_motor' to='scan2/start_motor' />
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan3" ns="scan3" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan3/stop_motor' />
+    <remap from='start_motor' to='scan3/start_motor' />
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan4" ns="scan4" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan4/stop_motor' />
+    <remap from='start_motor' to='scan4/start_motor' />
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan5" ns="scan5" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan5/stop_motor' />
+    <remap from='start_motor' to='scan5/start_motor' />
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan6" ns="scan6" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan6/stop_motor' />
+    <remap from='start_motor' to='scan6/start_motor' />
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan7" ns="scan7" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan7/stop_motor' />
+    <remap from='start_motor' to='scan7/start_motor' />
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan8" ns="scan8" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan8/stop_motor' />
+    <remap from='start_motor' to='scan8/start_motor' />
+  </node>
+  <node pkg="rplidar_ros" type="rplidar_ros" name="scan9" ns="scan9" cwd="node" respawn="false" output="screen">
+    <remap from='stop_motor' to='scan9/stop_motor' />
+    <remap from='start_motor' to='scan9/start_motor' />
+  </node>
+  <node pkg="costmap_generator" type="costmap_generator" name="costmap_generator" cwd="node" respawn="false" output="screen">
+    <remap from='/scan1' to='scan1/scan' />
+    <remap from='/scan2' to='scan2/scan' />
+    <remap from='/scan3' to='scan3/scan' />
+    <remap from='/scan4' to='scan4/scan' />
+    <remap from='/scan5' to='scan5/scan' />
+    <remap from='/scan6' to='scan6/scan' />
+    <remap from='/scan7' to='scan7/scan' />
+    <remap from='/scan8' to='scan8/scan' />
+    <remap from='/scan9' to='scan9/scan' />
+  </node>
+
+</launch>

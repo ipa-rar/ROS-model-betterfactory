@@ -1,0 +1,7 @@
+ComponentInterface { name heatmap_saver
+	FromRosNode "heatmap_saver.heatmap_saver.heatmap_saver"
+	RosSubscribers{
+		RosSubscriber "heatmap" { RefSubscriber "heatmap_saver.heatmap_saver.heatmap_saver.heatmap"}
+	}
+	
+}

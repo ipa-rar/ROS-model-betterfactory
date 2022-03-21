@@ -1,0 +1,14 @@
+ComponentInterface { name map_server
+	FromRosNode "map_server.map_server.map_server"
+	RosPublishers{
+		RosPublisher "map_metadata" { RefPublisher "map_server.map_server.map_server.map_metadata"},
+		RosPublisher "map" { RefPublisher "map_server.map_server.map_server.map"}
+	}
+	RosSrvServers{
+		RosServiceServer "static_map" { RefServer "map_server.map_server.map_server.static_map"}
+	}
+	
+		RosParameters{
+			RosParameter "frame_id" { RefParameter "map_server.map_server.map_server.frame_id"}
+		}
+}

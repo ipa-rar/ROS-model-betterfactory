@@ -1,0 +1,24 @@
+ComponentInterface { name rplidar_ros
+	FromRosNode "rplidar_ros.rplidar_ros.rplidar_ros"
+	RosPublishers{
+		RosPublisher "scan" { RefPublisher "rplidar_ros.rplidar_ros.rplidar_ros.scan"}
+	}
+	RosSrvServers{
+		RosServiceServer "stop_motor" { RefServer "rplidar_ros.rplidar_ros.rplidar_ros.stop_motor"},
+		RosServiceServer "start_motor" { RefServer "rplidar_ros.rplidar_ros.rplidar_ros.start_motor"}
+	}
+	
+		RosParameters{
+			RosParameter "channel_type" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.channel_type"},
+			RosParameter "tcp_ip" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.tcp_ip"},
+			RosParameter "tcp_port" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.tcp_port"},
+			RosParameter "udp_ip" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.udp_ip"},
+			RosParameter "udp_port" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.udp_port"},
+			RosParameter "serial_port" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.serial_port"},
+			RosParameter "serial_baudrate" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.serial_baudrate"},
+			RosParameter "frame_id" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.frame_id"},
+			RosParameter "inverted" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.inverted"},
+			RosParameter "angle_compensate" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.angle_compensate"},
+			RosParameter "scan_mode" { RefParameter "rplidar_ros.rplidar_ros.rplidar_ros.scan_mode"}
+		}
+}
